@@ -8,3 +8,18 @@ class Pet:
 
     def get_info(self):
         print(f" Name:{self._name}\n Species:{self._species}\n Age:{self._age}\n Gender:{self._gender}")
+
+
+class Dog(Pet):
+    def __init__(self, name, age, gender, breed):
+        super().__init__(name, "Dog", age, gender)
+        self._breed = breed
+        
+
+    def dog_get_info(self):
+        self.get_info()
+        print(f' Breed:{self._breed}')
+
+
+    def bark(self):
+        print(' woof')
