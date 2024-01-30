@@ -23,3 +23,18 @@ class Dog(Pet):
 
     def bark(self):
         print(' woof')
+
+
+class Cat(Pet):
+    def __init__(self, name, age, gender, color):
+        super().__init__(name, "Cat", age, gender)
+        self._color = color
+        
+
+    def cat_get_info(self):
+         self.get_info()
+         print(f' Color:{self._color}')
+
+
+    def meow(self):
+         print(' meow')
